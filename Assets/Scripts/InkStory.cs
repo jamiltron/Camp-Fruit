@@ -49,6 +49,10 @@ public class InkStory : MonoBehaviour
         {
             string text = _inkStory.Continue();
             //Debug.Log(text);
+            if (_inkStory.currentTags.Contains("thought"))
+            {
+                text = "<i>" + text + "</i>";
+            }
             storyText.text = text;
             storyText.gameObject.SetActive(true);
             showingChoice = false;
