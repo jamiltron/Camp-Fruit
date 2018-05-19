@@ -14,6 +14,10 @@ So here I am on my way to Camp Fruit.
 === arrive_at_camp ===
 The bus pulls up.
 A gate on the road reads "Camp Fruit! Where all your dreams come true!"
-Counselor: "Okay everyone! Get all your belongings and let's head to the cabin!"
+Counselor: "Okay everyone! Get all your belongings and let's hike up to the cabin!"
 Why is everything so chipper here?
+*   [It's probably the trees.] -> move_on
+*   [Who knows?] -> move_on
+= move_on
+Well, let's go.
 -> END
