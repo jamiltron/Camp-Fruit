@@ -38,6 +38,7 @@ public class InkStory : MonoBehaviour
 
     public void OnChoiceSelect(int choiceIndex)
     {
+        Debug.Log("Choice selected: " + choiceIndex);
         _inkStory.ChooseChoiceIndex(choiceIndex);
         StepStory();
     }
@@ -49,6 +50,7 @@ public class InkStory : MonoBehaviour
             string text = _inkStory.Continue();
             Debug.Log(text);
             storyText.text = text;
+            storyText.gameObject.SetActive(true);
             showingChoice = false;
 
             foreach (Button choiceButton in choiceButtons)
