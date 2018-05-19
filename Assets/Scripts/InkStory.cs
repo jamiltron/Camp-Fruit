@@ -56,10 +56,8 @@ public class InkStory : MonoBehaviour
                 choiceButton.gameObject.SetActive(false);
             }
         }
-        // TODO: Only show choices if not already showing choices?
         else if (!showingChoice && _inkStory.currentChoices.Count > 0)
         {
-            // TODO: Try to show choices?
             for (int i = 0; i < _inkStory.currentChoices.Count; ++i)
             {
                 Choice choice = _inkStory.currentChoices[i];
