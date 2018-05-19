@@ -38,7 +38,7 @@ public class InkStory : MonoBehaviour
 
     public void OnChoiceSelect(int choiceIndex)
     {
-        Debug.Log("Choice selected: " + choiceIndex);
+        //Debug.Log("Choice selected: " + choiceIndex);
         _inkStory.ChooseChoiceIndex(choiceIndex);
         StepStory();
     }
@@ -48,7 +48,7 @@ public class InkStory : MonoBehaviour
         if (_inkStory.canContinue)
         {
             string text = _inkStory.Continue();
-            Debug.Log(text);
+            //Debug.Log(text);
             storyText.text = text;
             storyText.gameObject.SetActive(true);
             showingChoice = false;
@@ -63,7 +63,7 @@ public class InkStory : MonoBehaviour
             for (int i = 0; i < _inkStory.currentChoices.Count; ++i)
             {
                 Choice choice = _inkStory.currentChoices[i];
-                Debug.Log("Choice " + (i + 1) + ". " + choice.text);
+                //Debug.Log("Choice " + (i + 1) + ". " + choice.text);
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtons[i].GetComponentInChildren<Text>().text = choice.text;
             }
