@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour {
     void changeScene(GameObject scene) {
         currentScene = scene;
         transform.position = scene.transform.position + sceneOffset;
+        transform.rotation = scene.transform.rotation;
     }
 
     public void changeToPicnic() {
