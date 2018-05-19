@@ -8,6 +8,19 @@ public class CameraController : MonoBehaviour {
     public GameObject picnicScene;
     public Vector3 sceneOffset = new Vector3(0, 1, -10);
 
+    void changeScene(GameObject scene) {
+        currentScene = scene;
+        transform.position = scene.transform.position + sceneOffset;
+    }
+
+    public void changeToPicnic() {
+        this.changeScene(picnicScene);
+    }
+    
+    public void changeToCamp() {
+        this.changeScene(campScene);
+    }
+
 	// Use this for initialization
 	void Start () {
         transform.position = currentScene.transform.position + sceneOffset;
@@ -17,11 +30,9 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown("Change Scene")) {
             if (currentScene == campScene) {
-                currentScene = picnicScene;
-                transform.position = picnicScene.transform.position + sceneOffset;
+                this.changeToPicnic();
             } else if (currentScene == picnicScene) {
-                currentScene = campScene;
-                transform.position = campScene.transform.position + sceneOffset;
+                this.changeToCamp();
             } else {
                 throw new System.Exception("WHAT SCENE DO YOU THINK YOU ARE IN?");
             }
