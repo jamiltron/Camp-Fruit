@@ -105,7 +105,7 @@ public class InkStory : MonoBehaviour
         if (finishedTyping) {
             if (_inkStory.canContinue) {
                 // Get next story text string
-                textString = _inkStory.Continue();
+                textString = _inkStory.Continue().Trim();
                 UpdateLocationTags();
                 if (_inkStory.currentTags.Contains("thought"))
                 {

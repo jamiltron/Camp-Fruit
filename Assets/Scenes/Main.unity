@@ -680,6 +680,11 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 114242893550100172, guid: 3d3144f830a744b55972e41a4e6a15d5,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d3144f830a744b55972e41a4e6a15d5, type: 2}
   m_IsPrefabParent: 0
