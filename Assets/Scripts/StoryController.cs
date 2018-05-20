@@ -63,4 +63,12 @@ public class StoryController : MonoBehaviour {
             Destroy(go);
         }
     }
+
+    public void DestroyByName(string name)
+    {
+        var go = GameObject.Find(name);
+        if (go != null) {
+            Destroy(go);
+        }
+    }
 }

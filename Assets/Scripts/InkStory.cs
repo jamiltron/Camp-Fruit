@@ -107,14 +107,14 @@ public class InkStory : MonoBehaviour
         }
     }
 
-    private void ReadDestroyTags()
-    {
-        foreach (string tag in _inkStory.currentTags)
-        {
-            if (tag.StartsWith("destroy_tag: "))
-            {
+    private void ReadDestroyTags() {
+        foreach (string tag in _inkStory.currentTags) {
+            if (tag.StartsWith("destroy_tag: ")) {
                 string destroyTag = tag.Substring(13);
                 storyController.DestroyByTag(destroyTag);
+            } else if (tag.StartsWith("destroy_name: ")) {
+                string destroyName = tag.Substring(14);
+                storyController.DestroyByName(destroyName);
             }
         }
     }
