@@ -88,7 +88,22 @@ public class InkStory : MonoBehaviour
         StepStory();
     }
 
-    private void UpdateLocationTags() {
+    private void ReadTags() {
+        ReadLocationTags();
+        ReadSpawnTags();
+    }
+
+    private void ReadSpawnTags() {
+        foreach (string tag in _inkStory.currentTags) {
+            if (tag.StartsWith("spawn: ")) {
+                string rest = tag.Substring(7);
+                var pieces = rest.Split(',');
+                storyController.Spawn(pieces[0], pieces[1]);
+            }
+        }
+    }
+
+    private void ReadLocationTags() {
         foreach (string tag in _inkStory.currentTags) {
             if (tag.StartsWith("location: ")) {
                 string location = tag.Substring(10);
@@ -109,7 +124,7 @@ public class InkStory : MonoBehaviour
             if (_inkStory.canContinue) {
                 // Get next story text string
                 textString = _inkStory.Continue().Trim();
-                UpdateLocationTags();
+                ReadTags();
                 if (_inkStory.currentTags.Contains("thought"))
                 {
                     textStyle = FontStyle.Italic;
