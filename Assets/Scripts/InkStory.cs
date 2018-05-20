@@ -92,6 +92,7 @@ public class InkStory : MonoBehaviour
     }
 
     private void ReadTags() {
+        ReadUITags();
         ReadLocationTags();
         ReadDestroyTags();
         ReadSpawnTags();
@@ -119,18 +120,30 @@ public class InkStory : MonoBehaviour
         }
     }
 
+    private void ReadUITags() {
+        foreach (string tag in _inkStory.currentTags) {
+            if (tag == "hide_box") {
+                panel.gameObject.SetActive(false);
+            } else if (tag == "show_box") {
+                panel.gameObject.SetActive(true);
+            }
+
+            if (tag == "hide_title") {
+                titleText.gameObject.SetActive(false);
+            }
+            else if (tag == "show_title") {
+                titleText.gameObject.SetActive(true);
+            }
+        }
+    }
+
     private void ReadLocationTags() {
         foreach (string tag in _inkStory.currentTags) {
             if (tag.StartsWith("location: ")) {
                 string location = tag.Substring(10);
                 if (location == "title") {
                     cameraController.changeToTitle();
-                    titleText.gameObject.SetActive(true);
-                    panel.SetActive(false);
                 } else {
-                    panel.SetActive(true);
-                    titleText.gameObject.SetActive(false);
-                    storyText.gameObject.SetActive(true);
                     if (location == "camp") {
                     cameraController.changeToCamp();
                     } else if (location == "picnic") {

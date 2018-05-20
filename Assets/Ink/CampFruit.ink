@@ -4,11 +4,14 @@ VAR petName = ""
 
 === title ===
 # location: title
+# show_title
+# hide_box
 Camp Fruit
 -> intro
 
 === intro ===
-# location: gate
+# location: title
+# show_box
 Summer. The most exciting time of the year. # thought
 Yeah right. # thought
 All the years before I just got to hang out with my friends at home. Playing video games and eating pizza and having good old fashioned kid fun. # thought
@@ -20,7 +23,8 @@ So here I am on my way to Camp Fruit. # thought
 
 === arrive_at_camp ===
 # location: camp
-The bus pulls up.
+# hide_title
+The bus pulls up to the camp.
 A gate on the road reads: "Camp Fruit! Where all your dreams come true!"
 Counselor: "Okay everyone! Get all your belongings and let's hike up to the cabin!"
 Why is everything so chipper here? # thought

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2003931976}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028364, g: 0.22571398, b: 0.30692267, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1912,13 +1912,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372618687}
-  m_LocalRotation: {x: -0, y: -0.9379478, z: -0, w: 0.3467767}
-  m_LocalPosition: {x: 324.27, y: 3.44, z: 252.3}
+  m_LocalRotation: {x: 0, y: -0.76821655, z: 0, w: 0.6401901}
+  m_LocalPosition: {x: 292.37, y: 5.42, z: 121.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -139.419, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -100.388, z: 0}
 --- !u!114 &1372618693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a39bbda582a44b828b1b74b8808b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 1453291426}
+  currentScene: {fileID: 1337402326}
   gateScene: {fileID: 1453291426}
   campScene: {fileID: 437370076}
   picnicScene: {fileID: 1188554158}
