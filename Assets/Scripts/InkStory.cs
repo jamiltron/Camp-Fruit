@@ -20,6 +20,8 @@ public class InkStory : MonoBehaviour
     //public LayoutGroup choicesLayout;
     public Button[] choiceButtons;
 
+    public CameraController cameraController;
+
     private bool showingChoice;
 
     private float speedMultiplier = 4;
@@ -82,7 +84,26 @@ public class InkStory : MonoBehaviour
         StepStory();
     }
 
+    private void UpdateLocationTags() {
+        foreach (string tag in _inkStory.currentTags) {
+            if (tag.Length >= 10 && tag.Substring(0, 10) == "location: ") {
+                string location = tag.Substring(10);
+                print("LOCATION! " + location);
+
+                if (location == "camp") {
+                    cameraController.changeToCamp();
+                } else if (location == "picnic") {
+                    cameraController.changeToPicnic();
+                } else if (location == "gazeebo") {
+                    cameraController.changeToGazeebo();
+                }
+            }
+        }
+    }
+
     private void StepStory() {
+        UpdateLocationTags();
+
         if (finishedTyping) {
             if (_inkStory.canContinue) {
                 // Get next story text string

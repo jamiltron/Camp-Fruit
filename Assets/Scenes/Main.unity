@@ -2080,6 +2080,11 @@ Prefab:
       propertyPath: choiceButtons.Array.data[2]
       value: 
       objectReference: {fileID: 373158040}
+    - target: {fileID: 114245109640410280, guid: 6f03fbb735a134d42b7c9ce74b210625,
+        type: 2}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1372618693}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f03fbb735a134d42b7c9ce74b210625, type: 2}
   m_IsPrefabParent: 0
