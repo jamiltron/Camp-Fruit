@@ -94,20 +94,19 @@ public class InkStory : MonoBehaviour
                     cameraController.changeToCamp();
                 } else if (location == "picnic") {
                     cameraController.changeToPicnic();
-                } else if (location == "gazeebo") {
-                    cameraController.changeToGazeebo();
+                } else if (location == "gazebo") {
+                    cameraController.changeToGazebo();
                 }
             }
         }
     }
 
     private void StepStory() {
-        UpdateLocationTags();
-
         if (finishedTyping) {
             if (_inkStory.canContinue) {
                 // Get next story text string
                 textString = _inkStory.Continue();
+                UpdateLocationTags();
                 if (_inkStory.currentTags.Contains("thought"))
                 {
                     textStyle = FontStyle.Italic;
