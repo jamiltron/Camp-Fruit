@@ -33,7 +33,7 @@ Counselor: "Gather around the gazebo."
 === gazebo_choice ===
 # location: gazebo
 There are three watermelons on the ground.
-Wat?
+Wat? # thought
 Counselor: "Don't be shy. Inside of one of these watermelons is your new best friend!"
 Counselor: "Step up and pick one. You can't make a wrong choice!"
 *   [The left one?]
@@ -53,7 +53,7 @@ The watermelon splits open.
 Instead of a bunch of delicious watermelon innards pouring out, there's a cute little animal.
 It gingerly steps out of the surrounding shell.
 It's basically a dog made out of watermelon?
-Wat?
+Wat? # thought
 The beautiful creature shakes itself like a wet dog and bits of watermelon fruit rain everywhere.
 It looks at you.
 "Bork bork!"
@@ -62,9 +62,12 @@ Love at first bork.
 Counselor: "Ahh, such grace! Such beauty!"
 Counselor: "You should name your new friend!"
 *   Leah!
+    ~ petName = "Leah"
 *   Alice!
+    ~ petName = "Alice"
 *   Robert!
-- Yes. Clearly this was the destined name.
+    ~ petName = "Robert"
+- Yes. Clearly { petName } was the destined name.
 -> pre_picnic
 
 === pre_picnic ===
