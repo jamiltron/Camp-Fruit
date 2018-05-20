@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
     public GameObject currentScene;
+    public GameObject gateScene;
     public GameObject campScene;
     public GameObject picnicScene;
     public GameObject gazeboScene;
@@ -14,6 +15,11 @@ public class CameraController : MonoBehaviour {
         currentScene = scene;
         transform.position = scene.transform.position + sceneOffset;
         transform.rotation = scene.transform.rotation;
+    }
+
+    public void changeToGate()
+    {
+        this.changeScene(gateScene);
     }
 
     public void changeToPicnic() {
@@ -41,14 +47,16 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Change Scene")) {
-            if (currentScene == campScene) {
+            if (currentScene == gateScene) {
+                this.changeToCamp();
+            } else if (currentScene == campScene) {
                 this.changeToPicnic();
             } else if (currentScene == picnicScene) {
                 this.changeToGazebo();
             } else if (currentScene == gazeboScene) {
                 this.changeToTitle();
             } else if (currentScene == titleScene) {
-               this.changeToCamp();
+               this.changeToGate();
             } else {
                 throw new System.Exception("WHAT SCENE DO YOU THINK YOU ARE IN?");
             }
