@@ -1,5 +1,10 @@
 VAR petName = ""
 
+-> title
+
+=== title ===
+# location: title
+Camp Fruit
 -> intro
 
 === intro ===

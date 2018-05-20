@@ -18,6 +18,9 @@ public class InkStory : MonoBehaviour
     // UI Textbox that displays our story text
     public Text storyText;
 
+    public Text titleText;
+    public GameObject panel;
+
     //public LayoutGroup choicesLayout;
     public Button[] choiceButtons;
 
@@ -120,13 +123,21 @@ public class InkStory : MonoBehaviour
         foreach (string tag in _inkStory.currentTags) {
             if (tag.StartsWith("location: ")) {
                 string location = tag.Substring(10);
-
-                if (location == "camp") {
+                if (location == "title") {
+                    cameraController.changeToTitle();
+                    titleText.gameObject.SetActive(true);
+                    panel.SetActive(false);
+                } else {
+                    panel.SetActive(true);
+                    titleText.gameObject.SetActive(false);
+                    storyText.gameObject.SetActive(true);
+                    if (location == "camp") {
                     cameraController.changeToCamp();
-                } else if (location == "picnic") {
-                    cameraController.changeToPicnic();
-                } else if (location == "gazebo") {
-                    cameraController.changeToGazebo();
+                    } else if (location == "picnic") {
+                        cameraController.changeToPicnic();
+                    } else if (location == "gazebo") {
+                        cameraController.changeToGazebo();
+                    }
                 }
             }
         }
@@ -142,9 +153,11 @@ public class InkStory : MonoBehaviour
                 {
                     textStyle = FontStyle.Italic;
                 }
-                storyText.gameObject.SetActive(true);
                 storyText.text = "";
                 finishedTyping = false;
+                if (showingChoice) {
+                    storyText.gameObject.SetActive(true);
+                }
                 showingChoice = false;
 
                 foreach (Button choiceButton in choiceButtons) {
