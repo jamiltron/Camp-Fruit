@@ -14,14 +14,6 @@ public class StoryController : MonoBehaviour {
 	void Start () {
 	}
 
-    void SpawnDogAtGazebo() {
-        SpawnObjectAtLocation(dog, gazeboSpawnMiddle.transform);
-    }
-
-    void SpawnSparklesAtGazebo() {
-        SpawnObjectAtLocation(sparkles, gazeboSpawnMiddle.transform);
-    }
-
     void SpawnObjectAtLocation(GameObject go, Transform tro) {
         Instantiate<GameObject>(go, tro.position, tro.rotation);
     }

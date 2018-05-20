@@ -32,7 +32,7 @@ Counselor: "Gather around the gazebo."
 
 === gazebo_choice ===
 # location: gazebo
-There are three watermelons on the ground.
+There are three watermelons on the ground. # spawn: watermelon,gazebo # spawn: watermelon,gazebo_left # spawn: watermelon,gazebo_right
 Wat? # thought
 Counselor: "Don't be shy. Inside of one of these watermelons is your new best friend!"
 Counselor: "Step up and pick one. You can't make a wrong choice!"
