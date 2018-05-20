@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class StoryController : MonoBehaviour {
     public GameObject dog;
-    public GameObject dogGazeboSpawn;
+    public GameObject sparkles;
+    public GameObject gazeboSpawn;
 
-	// Use this for initialization
 	void Start () {
-        SpawnDogAtGazebo();
 	}
 
     void SpawnDogAtGazebo() {
-        Instantiate<GameObject>(dog, dogGazeboSpawn.transform.position, dogGazeboSpawn.transform.rotation);
+        SpawnObjectAtLocation(dog, gazeboSpawn.transform);
+    }
+
+    void SpawnSparklesAtGazebo() {
+        SpawnObjectAtLocation(sparkles, gazeboSpawn.transform);
+    }
+
+    void SpawnObjectAtLocation(GameObject go, Transform tro) {
+        Instantiate<GameObject>(go, tro.position, tro.rotation);
     }
 
     public void Spawn(string name, string place) {
@@ -26,9 +33,4 @@ public class StoryController : MonoBehaviour {
             Debug.LogError("Invalid name: " + name);
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
