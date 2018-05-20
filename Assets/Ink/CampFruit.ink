@@ -25,9 +25,11 @@ A gate on the road reads: "Camp Fruit! Where all your dreams come true!"
 Counselor: "Okay everyone! Get all your belongings and let's hike up to the cabin!"
 Why is everything so chipper here? # thought
 *   [It's probably the trees.]
+    And their evil pollen. # thought
 *   [Might be something in the water.]
+    Do they even have clean tap water here? # thought
 *   [Who knows?]
-TODO: Add something here.
+    You shudder inwardly.
 -   Well, let's go. # thought
 Counselor: "So here at Camp Fruit we make your dreams come true."
 Counselor: "Which means that you get to meet your best friend!"
@@ -85,13 +87,13 @@ Counselor: "You two should be friends!"
 
 === picnic ===
 # location: picnic
-Who's this kid just standing around these pristine picnic tables? # thought
+Who's this kid just standing around these pristine picnic tables? # thought # destroy_name: Dog(Clone)
 ???: "Hey, I've been waiting for you."
 You point at yourself.
 "Really? Me? Why?"
 ???: "Fate has brought us together..."
 No, you asked to talk to me. # thought
-???: "And now it's time, for Richy to strut his stuff!"
+???: "And now it's time, for Richie to strut his stuff!"
 "What?"
 ???: "Prepare your pet! For a cuteness competition!"
 TODO: Play dramatic battle begin music.
