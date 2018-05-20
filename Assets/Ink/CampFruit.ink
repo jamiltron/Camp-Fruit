@@ -36,11 +36,14 @@ There are three watermelons on the ground.
 Wat? # thought
 Counselor: "Don't be shy. Inside of one of these watermelons is your new best friend!"
 Counselor: "Step up and pick one. You can't make a wrong choice!"
+~ temp whichMelon = ""
 *   [The left one?]
+    ~ whichMelon = "left"
 *   [I guess the one in the middle...]
+    ~ whichMelon = "middle"
 *   [Right is might!]
-TODO: Make this text dynamic based on what you picked.
--   You sprint forward and grab the one you chose before the other kids can.
+    ~ whichMelon = "right"
+-   You sprint forward and grab the { whichMelon } watermelon before any other kid can.
 Okay. So what now? # thought
 A shake from the watermelon startles you and you drop it!
 Oh no! # thought
@@ -49,8 +52,8 @@ Counselor: "Take a look..."
 You peer closer and see a small crack in the melon.
 Suddenly...
 TODO: Insert transformation!
-The watermelon splits open.
-Instead of a bunch of delicious watermelon innards pouring out, there's a cute little animal.
+The watermelon splits open. # spawn: sparkle_effect
+Instead of a bunch of delicious watermelon innards pouring out, there's a cute little animal. # spawn: dog,gazebo
 It gingerly steps out of the surrounding shell.
 It's basically a dog made out of watermelon?
 Wat? # thought
