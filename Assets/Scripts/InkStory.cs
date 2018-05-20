@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 using Ink.Runtime;
 
+[RequireComponent(typeof(StoryController))]
 public class InkStory : MonoBehaviour
 {
 
@@ -30,6 +31,8 @@ public class InkStory : MonoBehaviour
     private string textString = "";
     private int currentStringIndex;
     private bool finishedTyping = true;
+
+    private StoryController storyController;
 
     private enum FontStyle {
         None,
@@ -63,6 +66,7 @@ public class InkStory : MonoBehaviour
     void Start()
     {
         _inkStory = new Story(inkAsset.text);
+        storyController = gameObject.GetComponent<StoryController>();
         StepStory();
 	}
 
@@ -88,7 +92,6 @@ public class InkStory : MonoBehaviour
         foreach (string tag in _inkStory.currentTags) {
             if (tag.StartsWith("location: ")) {
                 string location = tag.Substring(10);
-                print("LOCATION! " + location);
 
                 if (location == "camp") {
                     cameraController.changeToCamp();
