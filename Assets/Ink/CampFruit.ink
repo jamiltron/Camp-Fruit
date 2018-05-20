@@ -8,7 +8,7 @@ Camp Fruit
 -> intro
 
 === intro ===
-# location: camp
+# location: gate
 Summer. The most exciting time of the year. # thought
 Yeah right. # thought
 All the years before I just got to hang out with my friends at home. Playing video games and eating pizza and having good old fashioned kid fun. # thought

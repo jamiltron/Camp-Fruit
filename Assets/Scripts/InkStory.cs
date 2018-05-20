@@ -137,6 +137,11 @@ public class InkStory : MonoBehaviour
                         cameraController.changeToPicnic();
                     } else if (location == "gazebo") {
                         cameraController.changeToGazebo();
+                    } else if (location == "gate") {
+                        cameraController.changeToGate();
+                    }
+                    else {
+                        Debug.Log("Invalid location: " + location);
                     }
                 }
             }

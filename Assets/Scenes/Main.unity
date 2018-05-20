@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2003931976}
-  m_IndirectSpecularColor: {r: 0.18028364, g: 0.22571398, b: 0.30692267, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1689,7 +1689,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 288.274, z: 0}
 --- !u!114 &1082884750 stripped
 MonoBehaviour:
@@ -1912,13 +1912,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372618687}
-  m_LocalRotation: {x: -0, y: -0.76821864, z: -0, w: 0.64018756}
-  m_LocalPosition: {x: 292.37, y: 5.42, z: 121.35}
+  m_LocalRotation: {x: -0, y: -0.9379478, z: -0, w: 0.3467767}
+  m_LocalPosition: {x: 324.27, y: 3.44, z: 252.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -100.38801, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -139.419, z: 0}
 --- !u!114 &1372618693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,7 +1930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235a39bbda582a44b828b1b74b8808b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 437370076}
+  currentScene: {fileID: 1453291426}
+  gateScene: {fileID: 1453291426}
   campScene: {fileID: 437370076}
   picnicScene: {fileID: 1188554158}
   gazeboScene: {fileID: 1208406364}
@@ -2004,6 +2005,34 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 463990, guid: 9984667d6d5f2cd408ce06baa515ac52, type: 2}
   m_PrefabInternal: {fileID: 248045127}
+--- !u!1 &1453291426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1453291427}
+  m_Layer: 0
+  m_Name: GateScene
+  m_TagString: SceneContainer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1453291427
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453291426}
+  m_LocalRotation: {x: -0, y: -0.9379478, z: -0, w: 0.3467767}
+  m_LocalPosition: {x: 324.27, y: 3.44, z: 252.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: -139.419, z: 0}
 --- !u!1001 &1465170652
 Prefab:
   m_ObjectHideFlags: 0
@@ -2529,6 +2558,24 @@ GameObject:
   - component: {fileID: 2023405324}
   m_Layer: 0
   m_Name: GazeboSpawnPointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2023405324
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023405323}
+  m_LocalRotation: {x: -0, y: 0.58585066, z: -0, w: -0.810419}
+  m_LocalPosition: {x: 292.05, y: 1.247, z: 91.68}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 288.274, z: 0}
 --- !u!1 &2026160639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,19 +2594,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2023405324
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2023405323}
-  m_LocalRotation: {x: -0, y: 0.58585066, z: -0, w: -0.810419}
-  m_LocalPosition: {x: 292.05, y: 1.247, z: 91.68}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 288.274, z: 0}
 --- !u!224 &2026160640
 RectTransform:
   m_ObjectHideFlags: 0
