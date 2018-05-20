@@ -62,13 +62,13 @@ It looks at you.
 "Bork bork!"
 This is it.
 Love at first bork.
-Counselor: "Ahh, such grace! Such beauty!"
+Counselor: "Ahh, such grace! Much beauty!"
 Counselor: "You should name your new friend!"
-*   Leah!
+*   [Leah!]"Leah!"
     ~ petName = "Leah"
-*   Alice!
+*   [Alice!]"Alice!"
     ~ petName = "Alice"
-*   Robert!
+*   [Robert!]"Robert!"
     ~ petName = "Robert"
 - Yes. Clearly { petName } was the destined name.
 -> pre_picnic
@@ -81,7 +81,18 @@ Counselor: "You two should be friends!"
 
 === picnic ===
 # location: picnic
-Oh no, it's your soon-to-be rival!
-And they want to d-d-d-d-d-d-d-duel!
+Who's this kid just standing around these pristine picnic tables? # thought
+???: "Hey, I've been waiting for you."
+You point at yourself.
+"Really? Me? Why?"
+???: "Fate has brought us together..."
+No, you asked to talk to me. # thought
+???: "And now it's time, for Richy to strut his stuff!"
+"What?"
+???: "Prepare your pet! For a cuteness competition!"
+TODO: Play dramatic battle begin music.
+Oh no, it appears that you've met your rival!
+And he wants to d-d-d-d-d-d-d-duel!
+
 
 -> END
