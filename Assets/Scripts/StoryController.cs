@@ -55,4 +55,12 @@ public class StoryController : MonoBehaviour {
             SpawnObjectAtLocation(go, tro);
         }
     }
+
+    public void DestroyByTag(string tag)
+    {
+        var gos = GameObject.FindGameObjectsWithTag(tag);
+        foreach (var go in gos) {
+            Destroy(go);
+        }
+    }
 }

@@ -90,6 +90,7 @@ public class InkStory : MonoBehaviour
 
     private void ReadTags() {
         ReadLocationTags();
+        ReadDestroyTags();
         ReadSpawnTags();
     }
 
@@ -99,6 +100,18 @@ public class InkStory : MonoBehaviour
                 string rest = tag.Substring(7);
                 var pieces = rest.Split(',');
                 storyController.Spawn(pieces[0], pieces[1]);
+            }
+        }
+    }
+
+    private void ReadDestroyTags()
+    {
+        foreach (string tag in _inkStory.currentTags)
+        {
+            if (tag.StartsWith("destroy_tag: "))
+            {
+                string destroyTag = tag.Substring(13);
+                storyController.DestroyByTag(destroyTag);
             }
         }
     }
