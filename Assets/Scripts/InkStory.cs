@@ -86,7 +86,7 @@ public class InkStory : MonoBehaviour
 
     private void UpdateLocationTags() {
         foreach (string tag in _inkStory.currentTags) {
-            if (tag.Length >= 10 && tag.Substring(0, 10) == "location: ") {
+            if (tag.StartsWith("location: ")) {
                 string location = tag.Substring(10);
                 print("LOCATION! " + location);
 
@@ -112,6 +112,7 @@ public class InkStory : MonoBehaviour
                     textStyle = FontStyle.Italic;
                 }
                 storyText.gameObject.SetActive(true);
+                storyText.text = "";
                 finishedTyping = false;
                 showingChoice = false;
 
@@ -122,7 +123,7 @@ public class InkStory : MonoBehaviour
             else if (!showingChoice && _inkStory.currentChoices.Count > 0) {
                 for (int i = 0; i < _inkStory.currentChoices.Count; ++i) {
                     Choice choice = _inkStory.currentChoices[i];
-                    Debug.Log("Choice " + (i + 1) + ". " + choice.text);
+                    //Debug.Log("Choice " + (i + 1) + ". " + choice.text);
                     choiceButtons[i].gameObject.SetActive(true);
                     choiceButtons[i].GetComponentInChildren<Text>().text = choice.text;
                 }
