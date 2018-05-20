@@ -99,10 +99,47 @@ You point at yourself.
 No, you asked to talk to me. # thought
 ???: "And now it's time, for Richie to strut his stuff!"
 "What?"
-???: "Prepare your pet! For a cuteness competition!"
+???: "Prepare your pet! For a battle!"
+???: "Of cuteness~~~"
 TODO: Play dramatic battle begin music.
 Oh no, it appears that you've met your rival!
 And he wants to d-d-d-d-d-d-d-duel!
+Counselor: "This is great! Gather around, everyone, there's a cuteness competition sparking up!"
+Huh? When did they arrive? # thought
+The Counselor inches closer to you and whispers.
+Counselor: "The secret to these is to put the cutest accessories on your pet."
+Counselor: "There's a box of cute things right over here!"
+They gesture behind one of the picnic tables.
+I guess this kid came prepared. # thought
+-> battle_start
 
+= battle_start
+TODO: Change camera.
+???: "Hah! You don't stand a chance against us!"
+The kid puts a Winter Hat on his dog...
+It looks adorable on Richie! The crowd goes wild.
+This won't be easy. # thought
+You rummage through the box of accessories and find a few promising items.
+What do you put on your dog?
+~ temp hatChoice = ""
+*   [Top Hat]
+    ~ hatChoice = "Top Hat"
+*   [Santa Hat]
+    ~ hatChoice = "Santa Hat"
+*   [Witch Hat]
+    ~ hatChoice = "Witch Hat"
+-   With a flourish, you place a { hatChoice } on { petName }.
+...
+Wow, { petName } looks so cute! The crowd loves it!
+???: "Hmmpphhh. Good choice, but can you top this!"
+Your rival instructs Richie to run around.
+This is incredible. His ears flop around and his tongue hangs loose.
+Someone in the crowd is crying tears of joy.
+The fire's really turned up. All eyes are on you and { petName }.
+You've known each other for five minutes, but surely you two have a trick up your sleeve.
+What do you instruct { petName } to do?
+*   [A sweet flip!]
+*   [Bow all adorable-likes.]
+- ...
 
 -> END
