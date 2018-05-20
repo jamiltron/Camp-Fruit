@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928813072537266}
   m_Layer: 0
-  m_Name: WinterHat
+  m_Name: WinterHatWithTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

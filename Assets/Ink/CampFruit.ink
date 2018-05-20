@@ -43,7 +43,7 @@ Counselor: "Step up and pick one. You can't make a wrong choice!"
     ~ whichMelon = "middle"
 *   [Right is might!]
     ~ whichMelon = "right"
--   You sprint forward and grab the { whichMelon } watermelon before any other kid can.
+-   You sprint forward and grab the { whichMelon } watermelon before any other kid can. # destroy: gazebo_watermelons # spawn: watermelon,gazebo
 Okay. So what now? # thought
 A shake from the watermelon startles you and you drop it!
 Oh no! # thought
@@ -52,8 +52,8 @@ Counselor: "Take a look..."
 You peer closer and see a small crack in the melon.
 Suddenly...
 TODO: Insert transformation!
-The watermelon splits open. # spawn: sparkle_effect
-Instead of a bunch of delicious watermelon innards pouring out, there's a cute little animal. # spawn: dog,gazebo
+The watermelon splits open. # spawn: sparkle_effect,gazebo # spawn: dog,gazebo # destroy: watermelon
+Instead of a bunch of delicious watermelon innards pouring out, there's a cute little animal.
 It gingerly steps out of the surrounding shell.
 It's basically a dog made out of watermelon?
 Wat? # thought
