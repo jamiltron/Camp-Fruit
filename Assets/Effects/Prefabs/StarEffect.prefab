@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4300432777645486}
   m_Layer: 0
-  m_Name: StartEffect
+  m_Name: StarEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
