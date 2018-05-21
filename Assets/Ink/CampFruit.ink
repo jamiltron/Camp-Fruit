@@ -24,10 +24,13 @@ So here I am on my way to Camp Fruit. # thought
 === arrive_at_camp ===
 # location: camp
 # hide_title
-The bus pulls up to the camp.
-A gate on the road reads: "Camp Fruit! Where all your dreams come true!"
-Counselor: "Okay everyone! Get all your belongings and let's hike up to the cabin!"
-Why is everything so chipper here? # thought
+As the bus slows, you spot a sign.
+It reads: "Camp Fruit! Because fruit are really good for you!"
+The bus stops next to the camp.
+A kind-looking lady steps up onto the bus.
+???: "Hey folks! My name's Rebecca. I'll be your main camp counselor for the duration of your stay."
+Rebecca: "So first thing's first! Grab all your belongings and let's head over to the camp!"
+Wow, she oozes happiness. Why is everything so chipper here? # thought
 *   [It's probably the trees.]
     And their evil pollen. # thought
 *   [Might be something in the water.]
@@ -35,18 +38,18 @@ Why is everything so chipper here? # thought
 *   [Who knows?]
     You shudder inwardly.
 -   Well, let's go. # thought
-Counselor: "So here at Camp Fruit we make your dreams come true."
-Counselor: "Which means that you get to meet your best friend!"
-What're they talking about? # thought
-Counselor: "Gather around the gazebo."
+Rebecca: "So here at Camp Fruit we make your dreams come true."
+Rebecca: "Which means that you get to meet your best friend!"
+What is she talking about? # thought
+Rebecca: "Gather around the gazebo."
 -> gazebo_choice
 
 === gazebo_choice ===
 # location: gazebo
 There are three watermelons on the ground. # spawn: watermelon,gazebo # spawn: watermelon,gazebo_left # spawn: watermelon,gazebo_right
 Wat? # thought
-Counselor: "Don't be shy. Inside of one of these watermelons is your new best friend!"
-Counselor: "Step up and pick one. You can't make a wrong choice!"
+Rebecca: "Don't be shy. Inside of one of these watermelons is your new best friend!"
+Rebecca: "Step up and pick one. You can't make a wrong choice!"
 ~ temp whichMelon = ""
 *   [The left one?]
     ~ whichMelon = "left"
@@ -58,8 +61,8 @@ Counselor: "Step up and pick one. You can't make a wrong choice!"
 Okay. So what now? # thought
 A shake from the watermelon startles you and you drop it!
 Oh no! # thought
-Counselor: "It's okay! These little guys are made of sturdy stuff."
-Counselor: "Take a look..."
+Rebecca: "It's okay! These little guys are made of sturdy stuff."
+Rebecca: "Take a look..."
 You peer closer and see a small crack in the melon.
 Suddenly...
 The watermelon splits open. # spawn: sparkle_effect,gazebo # spawn: dog,gazebo # destroy_tag: Watermelon
@@ -72,8 +75,8 @@ It looks at you.
 "Bork bork!"
 This is it.
 Love at first bork.
-Counselor: "Ahh, such grace! Much beauty!"
-Counselor: "You should name your new friend!"
+Rebecca: "Ahh, such grace! Much beauty!"
+Rebecca: "You should name your new friend!"
 *   [Leah!]"Leah!"
     ~ petName = "Leah"
 *   [Alice!]"Alice!"
@@ -85,8 +88,8 @@ Counselor: "You should name your new friend!"
 
 === pre_picnic ===
 TODO: Fadeout/scene transition?
-Counselor: "Hey, there's another kid that wants to talk to you over by the picnic tables."
-Counselor: "You two should be friends!"
+Rebecca: "Hey, there's another kid that wants to talk to you over by the picnic tables."
+Rebecca: "You two should be friends!"
 -> picnic
 
 === picnic ===
@@ -104,12 +107,12 @@ No, you asked to talk to me. # thought
 TODO: Play dramatic battle begin music.
 Oh no, it appears that you've met your rival!
 And he wants to d-d-d-d-d-d-d-duel!
-Counselor: "This is great! Gather around, everyone, there's a cuteness competition sparking up!"
+Rebecca: "This is great! Gather around, everyone, there's a cuteness competition sparking up!"
 Huh? When did they arrive? # thought
 The Counselor inches closer to you and whispers.
-Counselor: "The secret to these is to put the cutest accessories on your pet."
-Counselor: "There's a box of cute things right over here!"
-They gesture behind one of the picnic tables.
+Rebecca: "The secret to these is to put the cutest accessories on your pet."
+Rebecca: "There's a box of cute things right over here!"
+She gestures behind one of the picnic tables.
 I guess this kid came prepared. # thought
 -> battle_start
 
@@ -131,7 +134,7 @@ What do you put on your dog?
 -   With a flourish, you place a { hatChoice } on { petName }.
 ...
 Wow, { petName } looks so cute! The crowd loves it!
-???: "Hmmpphhh. Good choice, but can you top this!"
+???: "Hmmpphhh! Good choice... but can you top this!"
 Your rival instructs Richie to run around.
 This is incredible. His ears flop around and his tongue hangs loose.
 Someone in the crowd is crying tears of joy.
