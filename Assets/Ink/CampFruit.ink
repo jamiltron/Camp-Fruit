@@ -1,4 +1,5 @@
 VAR petName = ""
+VAR rivalName = ""
 
 -> title
 
@@ -95,21 +96,30 @@ Rebecca: "You two should be friends!"
 === picnic ===
 # location: picnic
 Who's this kid just standing around these pristine picnic tables? # thought # destroy_name: Dog(Clone)
-???: "Hey, I've been waiting for you."
+???: "Hey newcomer. I'm..."
+*   [Gary]
+    ~ rivalName = "Gary"
+*   [Larry]
+    ~ rivalName = "Larry"
+*   [Jerry]
+    ~ rivalName = "Jerry"
+- "{ rivalName }!"
+{ rivalName }: "And I've been waiting for you."
 You point at yourself.
 "Really? Me? Why?"
-???: "Fate has brought us together..."
-No, you asked to talk to me. # thought
-???: "And now it's time, for Richie to strut his stuff!"
+{ rivalName }: "Fate has brought us together..."
+"No, Rebecca said you asked to talk to me."
+He's not really listening.
+{ rivalName }: "And now it's time, for Richie to strut his stuff!"
 "What?"
-???: "Prepare your pet! For a battle!"
-???: "Of cuteness~~~"
+{ rivalName }: "Prepare your pet! For a battle!"
+{ rivalName }: "Of cuteness~~~"
 TODO: Play dramatic battle begin music.
 Oh no, it appears that you've met your rival!
 And he wants to d-d-d-d-d-d-d-duel!
 Rebecca: "This is great! Gather around, everyone, there's a cuteness competition sparking up!"
 Huh? When did they arrive? # thought
-The Counselor inches closer to you and whispers.
+The counselor inches closer to you and whispers.
 Rebecca: "The secret to these is to put the cutest accessories on your pet."
 Rebecca: "There's a box of cute things right over here!"
 She gestures behind one of the picnic tables.
@@ -118,7 +128,7 @@ I guess this kid came prepared. # thought
 
 = battle_start
 TODO: Change camera.
-???: "Hah! You don't stand a chance against us!"
+{ rivalName }: "Hah! You don't stand a chance against us!"
 The kid puts a Winter Hat on his dog...
 It looks adorable on Richie! The crowd goes wild.
 This won't be easy. # thought
@@ -134,7 +144,7 @@ What do you put on your dog?
 -   With a flourish, you place a { hatChoice } on { petName }.
 ...
 Wow, { petName } looks so cute! The crowd loves it!
-???: "Hmmpphhh! Good choice... but can you top this!"
+{ rivalName }: "Hmmpphhh! Good choice... but can you top this!"
 Your rival instructs Richie to run around.
 This is incredible. His ears flop around and his tongue hangs loose.
 Someone in the crowd is crying tears of joy.
