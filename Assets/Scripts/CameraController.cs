@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour {
     public GameObject picnicScene;
     public GameObject gazeboScene;
     public GameObject titleScene;
+    public GameObject rivalScene;
+    
     public Vector3 sceneOffset = new Vector3(0, 1, -10);
 
     void changeScene(GameObject scene) {
@@ -38,6 +40,10 @@ public class CameraController : MonoBehaviour {
         this.changeScene(titleScene);
     }
 
+    public void changeToRival() {
+        this.changeScene(rivalScene);
+    }
+
 	// Use this for initialization
 	void Start () {
         //this.changeToTitle();
@@ -56,8 +62,10 @@ public class CameraController : MonoBehaviour {
             } else if (currentScene == gazeboScene) {
                 this.changeToTitle();
             } else if (currentScene == titleScene) {
-               this.changeToGate();
-            } else {
+		        this.changeToRival();
+		    } else if (currentScene == rivalScene) {
+                this.changeToGate();
+		    } else {
                 throw new System.Exception("WHAT SCENE DO YOU THINK YOU ARE IN?");
             }
         }
